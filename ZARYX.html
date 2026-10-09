@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    >
+
+    <title>ZARYX AI</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script
+        type="module"
+        src="script.js"
+    ></script>
+</head>
+
+<body class="zaryx-page">
+
+    <!-- BACKGROUND -->
+    <div class="cyber-background">
+
+        <div class="cyber-grid"></div>
+
+        <div class="scanline"></div>
+
+        <div class="background-orb orb-one"></div>
+
+        <div class="background-orb orb-two"></div>
+
+        <div class="background-orb orb-three"></div>
+
+    </div>
+
+
+    <!-- CURSOR -->
+    <div class="cursor"></div>
+
+    <div class="cursor-ring"></div>
+
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <div class="nav-logo">
+
+            <div class="mini-logo">
+                Z
+            </div>
+
+            <span>
+                ZARYX<span class="cyan">.</span>AI
+            </span>
+
+        </div>
+
+
+        <div class="nav-status">
+
+            <span class="status-dot"></span>
+
+            SYSTEM ONLINE
+
+        </div>
+
+
+        <button
+            id="logoutButton"
+            class="logout-button"
+        >
+            LOGOUT
+        </button>
+
+    </nav>
+
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <div class="hero-badge">
+
+            <span></span>
+
+            ZARYX INTELLIGENCE SYSTEM
+
+        </div>
+
+
+        <h1>
+            THINK
+            <span>BEYOND.</span>
+        </h1>
+
+
+        <p>
+            A futuristic AI workspace built for ideas,
+            conversations and creation.
+        </p>
+
+
+        <div class="hero-line"></div>
+
+    </section>
+
+
+    <!-- FEATURES -->
+    <section class="features">
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                ◈
+            </div>
+
+            <h3>
+                INTELLIGENT
+            </h3>
+
+            <p>
+                Ask questions, solve problems and explore ideas.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                ⚡
+            </div>
+
+            <h3>
+                FAST
+            </h3>
+
+            <p>
+                Built for quick responses and smooth conversations.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                ✦
+            </div>
+
+            <h3>
+                CREATIVE
+            </h3>
+
+            <p>
+                Generate ideas and turn imagination into visuals.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- AI WORKSPACE -->
+    <section
+        class="workspace"
+        id="workspace"
+    >
+
+        <div class="workspace-header">
+
+            <div>
+
+                <div class="workspace-title">
+                    ZARYX CORE
+                </div>
+
+                <div class="workspace-subtitle">
+                    NEURAL INTERFACE
+                </div>
+
+            </div>
+
+
+            <div class="mode-switch">
+
+                <button
+                    id="chatModeButton"
+                    class="mode-button active"
+                >
+                    💬 CHAT
+                </button>
+
+
+                <button
+                    id="imageModeButton"
+                    class="mode-button"
+                >
+                    🎨 IMAGE
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- CHAT MODE -->
+        <div
+            id="chatMode"
+            class="mode-panel active"
+        >
+
+            <div
+                id="chatMessages"
+                class="chat-messages"
+            >
+
+                <div class="message assistant-message">
+
+                    <div class="message-avatar">
+                        Z
+                    </div>
+
+
+                    <div class="message-body">
+
+                        <div class="message-name">
+                            ZARYX
+                        </div>
+
+
+                        <div class="message-text">
+
+                            Yo! I'm ZARYX ⚡
+
+                            <br><br>
+
+                            Your AI interface is online.
+                            What are we building today?
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="typingIndicator"
+                class="typing-indicator hidden"
+            >
+
+                <div class="message-avatar">
+                    Z
+                </div>
+
+
+                <div class="typing-box">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </div>
+
+            </div>
+
+
+            <div class="input-area">
+
+                <textarea
+                    id="chatInput"
+                    placeholder="Message ZARYX..."
+                    rows="1"
+                ></textarea>
+
+
+                <button
+                    id="sendButton"
+                    class="send-button"
+                    title="Send"
+                    aria-label="Send message"
+                >
+                    ➤
+                </button>
+
+            </div>
+
+
+            <div class="input-hint">
+                ENTER = SEND &nbsp; • &nbsp; SHIFT + ENTER = NEW LINE
+            </div>
+
+        </div>
+
+
+        <!-- IMAGE MODE -->
+        <div
+            id="imageMode"
+            class="mode-panel image-mode"
+        >
+
+            <div class="image-header">
+
+                <div class="image-icon">
+                    ✦
+                </div>
+
+
+                <h2>
+                    ZARYX
+                    <span>VISION</span>
+                </h2>
+
+
+                <p>
+                    Describe anything. Let ZARYX create it.
+                </p>
+
+            </div>
+
+
+            <textarea
+                id="imagePrompt"
+                placeholder="A futuristic cyberpunk city floating above the clouds..."
+                rows="5"
+            ></textarea>
+
+
+            <button
+                id="generateImageButton"
+                class="generate-image-button"
+            >
+                <span>✦</span>
+                GENERATE IMAGE
+            </button>
+
+
+            <div
+                id="imageLoading"
+                class="image-loading hidden"
+            >
+
+                <div class="loading-orb"></div>
+
+                <p>
+                    ZARYX IS CREATING...
+                </p>
+
+            </div>
+
+
+            <div
+                id="imageResult"
+                class="image-result"
+            ></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="footer-logo">
+            ZARYX<span>.</span>AI
+        </div>
+
+        <p>
+            BUILT FOR THE FUTURE.
+        </p>
+
+        <div class="footer-line"></div>
+
+        <span>
+            SYSTEM STATUS: ONLINE
+        </span>
+
+    </footer>
+
+
+</body>
+
+</html>
